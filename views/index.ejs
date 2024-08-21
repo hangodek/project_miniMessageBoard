@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <ul>
+            <% for (let i = 0; i < messages.length; i++) { %>
+                <li>User = <%= messages[i].user %>, Text = <%= messages[i].text %>, Date = <%= messages[i].added %> </li>
+            <% } %>
+            <a href="/new">Click me</a>
+        </ul>
+    </body>
+</html>
