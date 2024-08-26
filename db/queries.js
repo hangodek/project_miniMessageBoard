@@ -27,6 +27,10 @@ async function deleteUser(id) {
     await pool.query('DELETE FROM usernames WHERE id = ($1)', [id]);
 }
 
+async function deleteAllUser() {
+  await pool.query('DELETE FROM usernames');
+}
+
 async function sendSql(sql) {
     const client = new Client({
         connectionString: `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
@@ -42,6 +46,7 @@ module.exports = {
   getUserWithName,
   insertUsername,
   deleteUser,
+  deleteAllUser,
   updateUser,
   sendSql,
 };

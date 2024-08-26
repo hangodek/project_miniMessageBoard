@@ -18,6 +18,7 @@ userRoutes.get('/:id/update', userController.updateUserForm);
 userRoutes.post('/:id/update', userController.updateUser);
 
 userRoutes.post('/:id/delete', userController.deleteUser);
+userRoutes.post('/deleteAll', userController.deleteAllUser);
 
 
 module.exports = userRoutes;

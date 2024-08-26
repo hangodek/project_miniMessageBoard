@@ -10,5 +10,6 @@ module.exports = new Pool({
 //   password: "123",
 //   port: 5432,
 
-  connectionString: `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
+  // connectionString: `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
+   connectionString: process.env.POSTGRES_URL,
 });

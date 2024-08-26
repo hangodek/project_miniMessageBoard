@@ -53,7 +53,10 @@ async function deleteUser(req, res) {
     res.redirect('/')
 }
 
-
+async function deleteAllUser(req, res) {
+    db.deleteAllUser();
+    res.redirect('/');
+}
 
 module.exports = {
     createNewUserList,
@@ -62,5 +65,6 @@ module.exports = {
     getUser,
     createNewUser,
     deleteUser,
+    deleteAllUser,
     updateUser,
 }
